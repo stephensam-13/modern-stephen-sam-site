@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Terminal } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import logo from '@/assets/logo.png';
 
 const navItems = [
   { name: 'About', href: '#about' },
@@ -35,9 +36,8 @@ const Navbar = () => {
       >
         <div className="section-container">
           <div className="flex items-center justify-between h-16 md:h-20">
-            <a href="#" className="flex items-center gap-2 text-foreground font-semibold text-lg">
-              <Terminal className="w-5 h-5 text-primary" />
-              <span>Stephen Sam</span>
+            <a href="#" className="flex items-center gap-2">
+              <img src={logo} alt="Stephen Sam Logo" className="h-10 md:h-12 w-auto" />
             </a>
 
             {/* Desktop Navigation */}
